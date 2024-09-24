@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins", system-ui;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    padding:10px;
+    height:50px;
+    background:#26355D;
+    color:white;
+    transition:background-color 1s ease;
+}
+
+.navbar-brand{
+    font-size:1.6rem;
+} 
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration:none;
+}
+
+.navbarcontents{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.navbarcontents li{
+    margin-right:30px;
+}
+.text{
+    position:relative;
+}
+.text::before{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background-color:#FFDB00;
+    transform-origin:left;
+    transform:scaleX(0);
+    transition:0.7s;
+}
+
+.text:hover::before{
+    transform: scaleX(1);
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#home {
+    color:white;
+    min-height: 100vh;
+    background-image:url("sample.webp");
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+#about {
+    background-color: #ddd;
+    min-height: 100vh;
+}
+
+.card{
+    margin-top:6rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:40px;
+}
+
+#services {
+    background-color: #bbb;
+    min-height: 100vh;
+}
+
+#contact {
+    background-color: #999;
+    min-height: 100vh;
+}
+
+/* Sticky navigation when scrolling */
+.sticky {
+    background-color: rgb(0, 0, 0);
+}
